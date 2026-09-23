@@ -42,14 +42,17 @@ export const ANCHORS: Anchor[] = [
   },
   {
     // SEP-6 programmatic withdraw — rates are indicative, not firm quotes
+    // Verified 2026-09-23: /info returns NGNT deposit/withdraw; /sep31/direct/info returns USDC receive
+    // TOML: NGNT issuer GAWODAROMJ33V5YDFY3NPYTHVYQG7MJXVJ2ND3AOGIHYRWINES6ACCPD
     id: 'cowrie',
     name: 'Cowrie Exchange',
     homeDomain: 'cowrie.exchange',
     serviceDomain: 'api.cowrie.exchange',
-    corridors: ['usdc-ngn'],
-    seps: ['sep6', 'sep10'],
-    assetCode: 'USDC',
-    assetIssuer: USDC_ISSUER,
+    corridors: ['ngnt-ngn'],
+    sep31Corridors: ['usdc-ngn'],
+    seps: ['sep6', 'sep10', 'sep31'],
+    assetCode: 'NGNT',
+    assetIssuer: 'GAWODAROMJ33V5YDFY3NPYTHVYQG7MJXVJ2ND3AOGIHYRWINES6ACCPD',
   },
   {
     id: 'anclap',

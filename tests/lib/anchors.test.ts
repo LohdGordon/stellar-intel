@@ -30,9 +30,9 @@ describe('ANCHORS', () => {
     expect(mg.corridors).toContain('usdc-brl');
   });
 
-  it('Cowrie is only in usdc-ngn', () => {
+  it('Cowrie is only in ngnt-ngn', () => {
     const cowrie = ANCHORS.find((a) => a.id === 'cowrie')!;
-    expect(cowrie.corridors).toEqual(['usdc-ngn']);
+    expect(cowrie.corridors).toEqual(['ngnt-ngn']);
   });
 
   it('Anclap covers usdc-ars and usdc-pen', () => {
